@@ -9,16 +9,16 @@ module IB
       ActiveRecord::Base.logger = logger
     end
 
-#    # Establish DB connection and do other plumbing here
-#    def self.connect config
-#      #log.warn "Starting Database connection"
-#      ActiveRecord::Base.establish_connection(config)
-#      #ActiveRecord.colorize_logging = false
-#
-#      # Get rid of nasty conversion issues
-#      ActiveRecord::Base.default_timezone = :utc
-#      Time.zone = 'UTC'
-#    end
+    # Establish DB connection and do other plumbing here
+    def self.connect config
+      #log.warn "Starting Database connection"
+      ActiveRecord::Base.establish_connection(config)
+      #ActiveRecord.colorize_logging = false
+
+      # Get rid of nasty conversion issues
+      ActiveRecord::Base.default_timezone = :utc
+      Time.zone = 'UTC'
+    end
 
 
      # Load ActiveRecord::Schema ? where from ?
