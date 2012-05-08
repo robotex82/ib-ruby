@@ -133,7 +133,7 @@ module IB
         # Extending AR-backed Model class with attribute defaults
         if defined?(ActiveRecord::Base) && ancestors.include?(ActiveRecord::Base)
           def initialize attributes={}, opts={}
-            ActiveRecord::Base.establish_connection(ActiveRecord::Base.connection_config) unless ActiveRecord::Base.connected?
+            ActiveRecord::Base.establish_connection(Rails::Application::Configuration.database_configuration()) unless ActiveRecord::Base.connected?
             super default_attributes.merge(attributes), opts
           end
         else
