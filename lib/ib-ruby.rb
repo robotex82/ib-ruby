@@ -20,7 +20,7 @@ module IB
 
   require 'ib-ruby/symbols'
   
-  if defined?(RAILS_ENV)
+  if defined?(Rails) && Rails.respond_to?('env')
     require 'ib-ruby/engine'
   end
 end
