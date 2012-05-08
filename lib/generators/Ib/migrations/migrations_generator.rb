@@ -1,6 +1,6 @@
 require 'rails/generators/migration'
 
-module IB
+module Ib
   module Generators
     class MigrationsGenerator < ::Rails::Generators::Base
       include Rails::Generators::Migration
