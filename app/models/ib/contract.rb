@@ -1,7 +1,7 @@
 #require 'ib-ruby/models/contract_detail'
 #require 'ib-ruby/models/underlying'
-require 'contract_detail'
-require 'underlying'
+require 'ib/contract_detail'
+require 'ib/underlying'
 
 module Ib
 #  module Models
