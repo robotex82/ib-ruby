@@ -60,7 +60,7 @@ module IB
         log.info "Got next valid order id: #{next_local_id}."
       end
 
-      server[:socket] = IbSocket.open(options[:host], options[:port])
+      server[:socket] = IBSocket.open(options[:host], options[:port])
 
       # Secret handshake
       socket.write_data options[:client_version]
