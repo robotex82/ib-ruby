@@ -1,4 +1,4 @@
-require 'ib-ruby/ib'
+# require 'ib-ruby/ib'
 
 if defined?(Rails) && Rails.respond_to?('env')
   require 'ib-ruby/db'
@@ -7,7 +7,8 @@ end
 module IB
   # IB Models can be either database-backed, or not
   # By default there is no DB backend, unless specifically requested
-  # require 'ib-ruby/db' # to make all IB models database-backed
+  # require 'ib-ruby/db' 
+  # to make all IB models database-backed
   DB ||= false
   
   if defined?(Rails) && Rails.respond_to?('env')

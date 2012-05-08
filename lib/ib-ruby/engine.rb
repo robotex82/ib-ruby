@@ -6,21 +6,21 @@ module IB
     initializer "ib-ruby.active_record" do |app|
       ActiveSupport.on_load :active_record do
         module ::IB
-          require 'version'
-          require 'extensions'
-          require 'errors'
-          require 'constants'
-          require 'connection'
+          require 'ib-ruby/version'
+          require 'ib-ruby/extensions'
+          require 'ib-ruby/errors'
+          require 'ib-ruby/constants'
+          require 'ib-ruby/connection'
 
-          require 'models'
+          require 'ib-ruby/models'
           Datatypes = Models # Flatten namespace (IB::Contract instead of IB::Models::Contract)
           include Models # Legacy alias
 
-          require 'messages'
+          require 'ib-ruby/messages'
           IncomingMessages = Messages::Incoming # Legacy alias
           OutgoingMessages = Messages::Outgoing # Legacy alias
 
-          require 'symbols'  
+          require 'ib-ruby/symbols'  
         end
       end
     end
