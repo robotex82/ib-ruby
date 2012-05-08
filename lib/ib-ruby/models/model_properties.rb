@@ -134,7 +134,12 @@ module IB
         if defined?(ActiveRecord::Base) && ancestors.include?(ActiveRecord::Base)
           def initialize attributes={}, opts={}
             ActiveRecord::Base.establish_connection(Rails.configuration.database_configuration[Rails.env]) unless ActiveRecord::Base.connected?
-            super default_attributes.merge(attributes), opts
+            if ActiveRecord::Base.table_exists?(self.table_name)
+              super default_attributes.merge(attributes), opts
+            else
+              # Timestamps
+              prop :created_at, :updated_at
+            end  
           end
         else
           # Timestamps
