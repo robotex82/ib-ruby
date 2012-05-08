@@ -1,13 +1,13 @@
 require 'ib-ruby/messages/abstract_message'
 
-module Ib
+module IB
   module Messages
     module Incoming
 
       # Container for specific message classes, keyed by their message_ids
       Classes = {}
 
-      class AbstractMessage < Ib::Messages::AbstractMessage
+      class AbstractMessage < IB::Messages::AbstractMessage
 
         def version # Per message, received messages may have the different versions
           @data[:version]

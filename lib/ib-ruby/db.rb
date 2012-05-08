@@ -2,7 +2,7 @@
 
 require 'active_record'
 
-module Ib
+module IB
   module Db
 
     def self.logger= logger

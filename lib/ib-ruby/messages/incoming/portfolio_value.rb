@@ -1,4 +1,4 @@
-module Ib
+module IB
   module Messages
     module Incoming
 
@@ -23,7 +23,7 @@ module Ib
       class PortfolioValue
 
         def contract
-          @contract = Ib::Contract.build @data[:contract]
+          @contract = IB::Contract.build @data[:contract]
         end
 
         def to_human

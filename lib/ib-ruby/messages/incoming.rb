@@ -8,7 +8,7 @@ require 'ib-ruby/messages/incoming/abstract_message'
 # TODO: Don't instantiate messages, use their classes as just namespace for .encode/decode
 # TODO: realize Message#fire method that raises EWrapper events
 
-module Ib
+module IB
   module Messages
 
     # Incoming IB messages (received from TWS/Gateway)

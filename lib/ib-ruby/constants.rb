@@ -1,4 +1,4 @@
-module Ib
+module IB
   ### Widely used TWS constants:
 
   EOL = "\0"

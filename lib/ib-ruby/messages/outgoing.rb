@@ -2,7 +2,7 @@ require 'ib-ruby/messages/outgoing/abstract_message'
 
 # TODO: Don't instantiate messages, use their classes as just namespace for .encode/decode
 
-module Ib
+module IB
   module Messages
 
     # Outgoing IB messages (sent to TWS/Gateway)

@@ -1,4 +1,4 @@
-module Ib
+module IB
   #module Models
 
     # Additional Contract properties (volatile, therefore extracted)

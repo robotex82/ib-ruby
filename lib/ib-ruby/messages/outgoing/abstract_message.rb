@@ -1,13 +1,13 @@
 require 'ib-ruby/messages/abstract_message'
 
-module Ib
+module IB
   module Messages
     module Outgoing
 
       # Container for specific message classes, keyed by their message_ids
       Classes = {}
 
-      class AbstractMessage < Ib::Messages::AbstractMessage
+      class AbstractMessage < IB::Messages::AbstractMessage
 
         def initialize data={}
           @data = data

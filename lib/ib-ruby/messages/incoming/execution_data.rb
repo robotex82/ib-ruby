@@ -1,4 +1,4 @@
-module Ib
+module IB
   module Messages
     module Incoming
 
@@ -33,11 +33,11 @@ module Ib
       class ExecutionData
 
         def contract
-          @contract = Ib::Contract.build @data[:contract]
+          @contract = IB::Contract.build @data[:contract]
         end
 
         def execution
-          @execution = Ib::Execution.new @data[:execution]
+          @execution = IB::Execution.new @data[:execution]
         end
 
         def load

@@ -1,2 +1,2 @@
-module Ib
+module IB
 end

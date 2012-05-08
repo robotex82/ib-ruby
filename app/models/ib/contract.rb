@@ -269,8 +269,8 @@ module IB
     class Contract
       # Specialized Contract subclasses representing different security types
       Subclasses = Hash.new(Contract)
-      Subclasses[:bag] = Ib::Bag
-      Subclasses[:option] = Ib::Option
+      Subclasses[:bag] = IB::Bag
+      Subclasses[:option] = IB::Option
 
       # This returns a Contract initialized from the serialize_ib_ruby format string.
       def self.build opts = {}

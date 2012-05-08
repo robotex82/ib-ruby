@@ -1,5 +1,5 @@
 # All message classes related to ticks located here
-module Ib
+module IB
   module Messages
     module Incoming
 

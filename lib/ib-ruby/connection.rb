@@ -1,7 +1,7 @@
 require 'ib-ruby/socket'
 require 'ib-ruby/logger'
 
-module Ib
+module IB
   # Encapsulates API connection to TWS or Gateway
   class Connection
 

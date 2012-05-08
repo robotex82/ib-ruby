@@ -1,4 +1,4 @@
-module Ib
+module IB
   module Messages
     module Incoming
 
@@ -36,12 +36,12 @@ module Ib
       class ContractData
 
         def contract
-          @contract = Ib::Contract.build @data[:contract].
+          @contract = IB::Contract.build @data[:contract].
                                              merge(:contract_detail => contract_detail)
         end
 
         def contract_detail
-          @contract_detail = Ib::ContractDetail.new @data[:contract_detail]
+          @contract_detail = IB::ContractDetail.new @data[:contract_detail]
         end
 
         alias contract_details contract_detail

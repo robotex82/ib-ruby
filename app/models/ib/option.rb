@@ -1,7 +1,7 @@
 #require 'ib-ruby/models/contract'
 require 'ib/contract'
 
-module Ib
+module IB
 #  module Models
     class Option < Contract
 

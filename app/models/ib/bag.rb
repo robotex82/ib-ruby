@@ -1,7 +1,7 @@
 #require 'ib-ruby/models/contract'
 require 'ib/contract'
 
-module Ib
+module IB
 #  module Models
 
     # "BAG" is not really a contract, but a combination (combo) of securities.

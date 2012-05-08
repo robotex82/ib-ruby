@@ -1,4 +1,4 @@
-module Ib
+module IB
   module Models
 
     # Base class for tableless IB data Models extends ActiveModel API

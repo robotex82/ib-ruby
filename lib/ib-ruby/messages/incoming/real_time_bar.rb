@@ -1,4 +1,4 @@
-module Ib
+module IB
   module Messages
     module Incoming
 
@@ -19,7 +19,7 @@ module Ib
                                 [:bar, :trades, :int]
       class RealTimeBar
         def bar
-          @bar = Ib::Bar.new @data[:bar]
+          @bar = IB::Bar.new @data[:bar]
         end
 
         def to_human

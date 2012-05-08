@@ -1,4 +1,4 @@
-module Ib
+module IB
 #  module Models
 
     # ComboLeg is essentially a join Model between Combo (BAG) Contract and

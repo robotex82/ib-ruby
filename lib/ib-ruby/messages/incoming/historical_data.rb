@@ -1,4 +1,4 @@
-module Ib
+module IB
   module Messages
     module Incoming
 
@@ -34,7 +34,7 @@ module Ib
           super
 
           @results = Array.new(@data[:count]) do |_|
-            Ib::Bar.new :time => socket.read_string,
+            IB::Bar.new :time => socket.read_string,
                         :open => socket.read_decimal,
                         :high => socket.read_decimal,
                         :low => socket.read_decimal,

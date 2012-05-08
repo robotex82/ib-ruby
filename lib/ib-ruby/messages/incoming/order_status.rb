@@ -1,4 +1,4 @@
-module Ib
+module IB
   module Messages
     module Incoming
 
@@ -45,7 +45,7 @@ module Ib
       class OrderStatus
 
         def order_state
-          @order_state ||= Ib::OrderState.new @data[:order_state]
+          @order_state ||= IB::OrderState.new @data[:order_state]
         end
 
         # Accessors to make OpenOrder and OrderStatus messages API-compatible
