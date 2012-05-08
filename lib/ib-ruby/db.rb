@@ -20,11 +20,6 @@ module IB
 #      Time.zone = 'UTC'
 #    end
 
-    def self.connect(config)
-      ActiveRecord::Base.default_timezone = :utc
-      Time.zone = 'UTC'
-      super
-    end  
 
      # Load ActiveRecord::Schema ? where from ?
   end # module DB
