@@ -138,7 +138,7 @@ module IB
               super default_attributes.merge(attributes), opts
             else
               # Timestamps
-              self.prop :created_at, :updated_at
+              self.class.prop :created_at, :updated_at
             end  
           end
         else
