@@ -1,3 +1,7 @@
+if defined?(Rails) && Rails.respond_to?('env')
+  require 'ib-ruby/db'
+end
+  
 module IB
   # IB Models can be either database-backed, or not
   # By default there is no DB backend, unless specifically requested
