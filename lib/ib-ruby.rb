@@ -19,6 +19,10 @@ module IB
   OutgoingMessages = Messages::Outgoing # Legacy alias
 
   require 'ib-ruby/symbols'
+  
+  if defined?(RAILS_ENV)
+    require 'ib-ruby/engine'
+  end
 end
 IbRuby = IB
 
