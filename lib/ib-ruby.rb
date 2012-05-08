@@ -31,5 +31,5 @@ module IB
     require 'ib-ruby/symbols'  
   end
 end
-IbRuby = Ib
+IbRuby = IB
 
