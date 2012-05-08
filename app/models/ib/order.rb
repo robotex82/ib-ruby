@@ -1,4 +1,4 @@
-module IB
+module Ib
 #  module Models
     class Order < Models::Model.for(:order)
       include Models::ModelProperties
@@ -242,10 +242,10 @@ module IB
 
       def order_state= state
         self.order_states.push case state
-                                 when IB::OrderState
+                                 when Ib::OrderState
                                    state
                                  when Symbol, String
-                                   IB::OrderState.new :status => state
+                                   Ib::OrderState.new :status => state
                                end
       end
 
@@ -306,7 +306,7 @@ module IB
                     :algo_strategy => '',
                     :transmit => true,
                     :what_if => false,
-                    :order_state => IB::OrderState.new(:status => 'New',
+                    :order_state => Ib::OrderState.new(:status => 'New',
                                                        :filled => 0,
                                                        :remaining => 0,
                                                        :price => 0,

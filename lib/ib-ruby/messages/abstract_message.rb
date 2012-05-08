@@ -1,4 +1,4 @@
-module IB
+module Ib
   module Messages
 
     # This is just a basic generic message from the server.

@@ -2,8 +2,8 @@
 
 require 'active_record'
 
-module IB
-  module DB
+module Ib
+  module Db
 
     def self.logger= logger
       ActiveRecord::Base.logger = logger

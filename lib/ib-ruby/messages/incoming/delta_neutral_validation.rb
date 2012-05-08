@@ -1,4 +1,4 @@
-module IB
+module Ib
   module Messages
     module Incoming
 
@@ -11,7 +11,7 @@ module IB
                                            [:underlying, :price, :decimal]
       class DeltaNeutralValidation
         def underlying
-          @underlying = IB::Underlying.new @data[:underlying]
+          @underlying = Ib::Underlying.new @data[:underlying]
         end
 
         alias under_comp underlying

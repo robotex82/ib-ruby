@@ -1,7 +1,7 @@
 #require 'ib-ruby/models/contract_detail'
 require 'ib/contract_detail'
 
-module IB
+module Ib
 #  module Models
 
     # Calculated characteristics of underlying Contract (volatile)

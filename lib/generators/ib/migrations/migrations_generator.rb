@@ -18,7 +18,7 @@ module Ib
 
       def copy_migrations
         migration_template "create_executions.rb", "db/migrate/create_executions.rb"
-        migration_template "create_order_states.rb", "db/migrate/create_order_state.rb"
+        migration_template "create_order_states.rb", "db/migrate/create_order_states.rb"
         migration_template "create_orders.rb", "db/migrate/create_orders.rb"
         migration_template "create_combo_legs.rb", "db/migrate/create_combo_legs.rb"
         migration_template "create_underlyings.rb", "db/migrate/create_underlyings.rb"

@@ -3,7 +3,7 @@
 require 'ib/contract_detail'
 require 'ib/underlying'
 
-module IB
+module Ib
 #  module Models
     class Contract < Models::Model.for(:contract)
       include Models::ModelProperties
@@ -269,8 +269,8 @@ module IB
     class Contract
       # Specialized Contract subclasses representing different security types
       Subclasses = Hash.new(Contract)
-      Subclasses[:bag] = IB::Bag
-      Subclasses[:option] = IB::Option
+      Subclasses[:bag] = Ib::Bag
+      Subclasses[:option] = Ib::Option
 
       # This returns a Contract initialized from the serialize_ib_ruby format string.
       def self.build opts = {}

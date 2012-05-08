@@ -1,4 +1,4 @@
-module IB
+module Ib
 #  module Models
 
     # OrderState represents dynamic (changeable) info about a single Order,

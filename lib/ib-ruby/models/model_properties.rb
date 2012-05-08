@@ -2,7 +2,7 @@ require 'active_model'
 require 'active_support/concern'
 require 'active_support/hash_with_indifferent_access'
 
-module IB
+module Ib
   module Models
 
     # Module adds prop Macro and

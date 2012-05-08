@@ -1,4 +1,4 @@
-module IB
+module Ib
 #  module Models
     # This is IB Order execution report.
     # Instantiate with a Hash of attributes, to be auto-set via initialize in Model.

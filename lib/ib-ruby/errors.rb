@@ -1,4 +1,4 @@
-module IB
+module Ib
 
   # Error handling
   class Error < RuntimeError
@@ -16,11 +16,11 @@ end # module IB
 def error message, type=:standard, backtrace=nil
   e = case type
         when :standard
-          IB::Error.new message
+          Ib::Error.new message
         when :args
-          IB::ArgumentError.new message
+          Ib::ArgumentError.new message
         when :load
-          IB::LoadError.new message
+          Ib::LoadError.new message
       end
   e.set_backtrace(backtrace) if backtrace
   raise e

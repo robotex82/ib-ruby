@@ -1,6 +1,6 @@
 require 'socket'
 
-module IB
+module Ib
   class IBSocket < TCPSocket
 
     # send nice null terminated binary data into socket

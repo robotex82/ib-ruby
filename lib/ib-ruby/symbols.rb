@@ -1,4 +1,4 @@
-module IB
+module Ib
   module Symbols
   end
 end

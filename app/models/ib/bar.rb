@@ -1,4 +1,4 @@
-module IB
+module Ib
 #  module Models
     # This is a single data point delivered by HistoricData or RealTimeBar messages.
     # Instantiate with a Hash of attributes, to be auto-set via initialize in Model.

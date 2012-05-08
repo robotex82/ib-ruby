@@ -1,4 +1,4 @@
-module IB
+module Ib
   module Messages
     module Outgoing
 
@@ -19,8 +19,8 @@ module IB
             error ":bar_size must be one of #{BAR_SIZES.inspect}", :args
           end
 
-          contract = data[:contract].is_a?(IB::Contract) ?
-              data[:contract] : IB::Contract.from_ib_ruby(data[:contract])
+          contract = data[:contract].is_a?(Ib::Contract) ?
+              data[:contract] : Ib::Contract.from_ib_ruby(data[:contract])
 
           [data_type, bar_size, contract]
         end

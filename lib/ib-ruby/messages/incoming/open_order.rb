@@ -1,4 +1,4 @@
-module IB
+module Ib
   module Messages
     module Incoming
 
@@ -85,11 +85,11 @@ module IB
         end
 
         def order
-          @order ||= IB::Order.new @data[:order].merge(:order_state => order_state)
+          @order ||= Ib::Order.new @data[:order].merge(:order_state => order_state)
         end
 
         def order_state
-          @order_state ||= IB::OrderState.new(
+          @order_state ||= Ib::OrderState.new(
               @data[:order_state].merge(
                   :local_id => @data[:order][:local_id],
                   :perm_id => @data[:order][:perm_id],
@@ -98,13 +98,13 @@ module IB
         end
 
         def contract
-          @contract ||= IB::Contract.build(
+          @contract ||= Ib::Contract.build(
               @data[:contract].merge(:underlying => underlying)
           )
         end
 
         def underlying
-          @underlying = @data[:underlying_present] ? IB::Underlying.new(@data[:underlying]) : nil
+          @underlying = @data[:underlying_present] ? Ib::Underlying.new(@data[:underlying]) : nil
         end
 
         alias under_comp underlying
@@ -133,7 +133,7 @@ module IB
                    # Never happens! 28 is the max supported version currently
                    # As of client v.55, we receive orderComboLegs (price) in openOrder
                    [29, [:contract, :legs, :array, proc do |_|
-                     IB::ComboLeg.new :con_id => socket.read_int,
+                     Ib::ComboLeg.new :con_id => socket.read_int,
                                       :ratio => socket.read_int,
                                       :action => socket.read_string,
                                       :exchange => socket.read_string,

@@ -1,4 +1,4 @@
-module IB
+module Ib
   module Messages
     module Incoming
 
@@ -36,7 +36,7 @@ module IB
                      :currency => socket.read_str,
                      :local_symbol => socket.read_str,
                      :contract_detail =>
-                         IB::ContractDetail.new(
+                         Ib::ContractDetail.new(
                              :market_name => socket.read_str,
                              :trading_class => socket.read_str)),
              :distance => socket.read_str,

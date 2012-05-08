@@ -1,4 +1,4 @@
-module IB
+module Ib
   module Models
 
     require 'ib-ruby/models/model_properties'
