@@ -135,6 +135,8 @@ module IB
           def initialize attributes={}, opts={}
             ActiveRecord::Base.establish_connection(Rails.configuration.database_configuration[Rails.env]) unless ActiveRecord::Base.connected?
             Rails.logger.debug("TABLE NAME: #{self.class.table_name}")
+            Rails.logger.debug("TABLE EXISTS: #{self.class.table_exists?.to_s}")
+            Rails.logger.debug("TABLE EXISTS #2: #{self.class.connection.table_exists?(self.class.table_name).to_s}")
             if self.class.table_exists?
               super default_attributes.merge(attributes), opts
             else
