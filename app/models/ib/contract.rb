@@ -3,7 +3,7 @@
 require 'ib/contract_detail'
 require 'ib/underlying'
 
-module Ib
+module IB
 #  module Models
     class Contract < Models::Model.for(:contract)
       include Models::ModelProperties
