@@ -263,8 +263,8 @@ module IB
 
     #require 'ib-ruby/models/option'
     #require 'ib-ruby/models/bag'
-    require 'option'
-    require 'bag'
+    require 'ib/option'
+    require 'ib/bag'
 
     class Contract
       # Specialized Contract subclasses representing different security types
